@@ -2,57 +2,36 @@
 
 Esta guía te ayudará a instalar el paquete Timeio Landing directamente desde GitHub sin necesidad de Packagist.
 
-## Opciones de Instalación
+## Instalación Rápida (Recomendado)
 
-### Opción 1: Configurar repositorio en tu composer.json
-
-Agrega el siguiente repositorio a tu `composer.json` del proyecto Laravel:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/timeio/landing"
-        }
-    ],
-    "require": {
-        "timeio/landing": "dev-main"
-    }
-}
-```
-
-Luego ejecuta:
+### Paso 1: Configurar el repositorio
 
 ```bash
-composer update
+composer config repositories.dsanchezmejia-landing vcs https://github.com/dsanchezmejia/landing
 ```
 
-### Opción 2: Configurar repositorio globalmente
+### Paso 2: Instalar el paquete
 
 ```bash
-composer config repositories.timeio-landing vcs https://github.com/timeio/landing
-composer require timeio/landing:dev-main
+composer require dsanchezmejia/landing:dev-main
 ```
 
-### Opción 3: Instalación directa con prefer-source
-
-```bash
-composer require timeio/landing:dev-main --prefer-source
-```
-
-### Opción 4: Usando composer require con URL completa
-
-```bash
-composer require "timeio/landing:dev-main" --repository='{"type":"vcs","url":"https://github.com/timeio/landing"}'
-```
+¡Listo! El paquete se instalará automáticamente y se registrará en Laravel.
 
 ## Verificación de Instalación
 
 Después de la instalación, verifica que el paquete se haya instalado correctamente:
 
 ```bash
-composer show timeio/landing
+composer show dsanchezmejia/landing
+```
+
+### Acceder a la Landing Page
+
+Una vez instalado, puedes acceder a la landing page en:
+
+```
+http://tu-dominio.com/landing
 ```
 
 ## Configuración Post-Instalación
@@ -71,26 +50,12 @@ Agrega a tu archivo `.env`:
 LANDING_LOGIN_URL=/login
 ```
 
-### 3. Compilar assets (opcional)
-
-Si quieres personalizar los estilos:
-
-```bash
-cd vendor/timeio/landing
-npm install
-npm run build
-```
-
-### 4. Acceder a la landing page
-
-Ve a: `http://tu-dominio.com/landing`
-
 ## Actualización del Paquete
 
 Para actualizar el paquete a la última versión:
 
 ```bash
-composer update timeio/landing
+composer update dsanchezmejia/landing
 ```
 
 ## Solución de Problemas
@@ -128,4 +93,4 @@ Si el paquete no se registra automáticamente:
 
 ## Soporte
 
-Para soporte y preguntas, abre un issue en el [repositorio de GitHub](https://github.com/timeio/landing/issues).
+Para soporte y preguntas, abre un issue en el [repositorio de GitHub](https://github.com/dsanchezmejia/landing/issues).
