@@ -1,0 +1,51 @@
+{
+  "name": "timeio-landing",
+  "version": "1.0.0",
+  "description": "Laravel Landing Package with TailwindCSS and SASS support",
+  "main": "resources/js/app.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "hot": "vite --host",
+    "sass": "sass resources/sass/app.scss public/css/app.css",
+    "sass:watch": "sass --watch resources/sass/app.scss:public/css/app.css",
+    "tailwind": "tailwindcss -i ./resources/sass/app.scss -o ./public/css/tailwind.css --watch",
+    "build:all": "npm run sass && npm run build",
+    "clean": "rm -rf public/vendor/landing && rm -rf public/css && rm -rf public/js"
+  },
+  "keywords": [
+    "laravel",
+    "landing",
+    "tailwindcss",
+    "sass",
+    "timeio"
+  ],
+  "author": "Timeio",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "laravel-vite-plugin": "^1.0.0",
+    "postcss": "^8.4.32",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timeio/landing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timeio/landing/issues"
+  },
+  "homepage": "https://github.com/timeio/landing#readme"
+}

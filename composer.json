@@ -1,0 +1,77 @@
+{
+    "name": "timeio/landing",
+    "description": "Laravel Landing Package with TailwindCSS and SASS support - Compatible with Laravel 12",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "landing",
+        "tailwindcss",
+        "sass",
+        "timeio",
+        "package"
+    ],
+    "homepage": "https://github.com/timeio/landing",
+    "support": {
+        "issues": "https://github.com/timeio/landing/issues",
+        "source": "https://github.com/timeio/landing"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/timeio/landing"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Timeio",
+            "email": "contact@timeio.com",
+            "homepage": "https://timeio.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/filesystem": "^11.0|^12.0",
+        "illuminate/view": "^11.0|^12.0",
+        "illuminate/routing": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Timeio\\Landing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Timeio\\Landing\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Timeio\\Landing\\LandingServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan vendor:publish --provider=\"Timeio\\Landing\\LandingServiceProvider\" --tag=\"landing-config\" --force"
+        ],
+        "post-update-cmd": [
+            "php artisan vendor:publish --provider=\"Timeio\\Landing\\LandingServiceProvider\" --tag=\"landing-config\" --force"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
